@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Encriptador - Alura</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- google - fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- google - fonts -->
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-    <img src="img/Logo.png" alt="Logo Alura">
-    <div>
-        <input type="text" name="texto" id="texto" placeholder="Ingrese el texto aquí">
-        <input type="button" value="Encriptar">
-        <input type="button" value="Desencriptar">
-    </div>
-    <div>
-        <input type="text" name="texto2" id="texto2" placeholder="Ingrese el texto que desee desencriptar">
-        <input type="button" value="Copiar">
-    </div>
+    <header>
+
+    </header>
+    <main>
+        <div class="d_img">
+            <img src="img/Logo.png" alt="Logo Alura" id="logo_alura">
+        </div>
+        <div class="d_encriptar">
+            <!-- <input type="text" name="texto" id="texto" placeholder="Ingrese el texto aquí"> -->
+            <textarea name="text" id="texto" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="detalle">
+                <p> <img src="img/exclamacion.svg" alt="exclamacion"> Solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <!-- <input type="button" class="boton" value="Encriptar" id="encriptar"> -->
+                <button class="boton" id="encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="boton" id="Desencriptar" onclick="desencriptar()">Desencriptar</button>
+                <!-- <input type="button" class="boton" value="Desencriptar" id="desencriptar"> -->
+            </div>
+        </div>
+        <div class="d_resultado">
+            <div class="d_mostrar">
+                <div class="d_resultado_hidden">
+                    <img src="img/person.svg" alt="persona con lupa" width="90%">
+                    <h3>Ningún mensaje fue encontrado</h3>
+                    <div class="detalle">
+                        Ingresa el texto que desees encriptar o desencriptar
+                    </div>
+                </div>
+                <textarea name="text" id="texto2" placeholder="Ingrese el texto que desee desencriptar" hidden></textarea>
+                <input type="hidden" class="boton" value="Copiar" id="copiar" hidden>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
