@@ -26,8 +26,8 @@
         </div>
         <div class="d_encriptar">
             <!-- <input type="text" name="texto" id="texto" placeholder="Ingrese el texto aquí"> -->
-            <textarea name="text" id="texto" placeholder="Ingrese el texto aqui"></textarea>
-            <div class="detalle">
+            <textarea autofocus name="text" id="texto" placeholder="Ingrese el texto aqui" onkeyup="reset_b()"></textarea>
+            <div class="detalle" id="ErrorMsg">
                 <p> <img src="img/exclamacion.svg" alt="exclamacion"> Solo letras minusculas y sin acentos</p>
             </div>
             <div class="botones">
@@ -39,15 +39,15 @@
         </div>
         <div class="d_resultado">
             <div class="d_mostrar">
-                <div class="d_resultado_hidden">
+                <div class="d_resultado_hidden" id="d_resultado_h">
                     <img src="img/person.svg" alt="persona con lupa" width="90%">
                     <h3>Ningún mensaje fue encontrado</h3>
                     <div class="detalle">
                         Ingresa el texto que desees encriptar o desencriptar
                     </div>
                 </div>
-                <textarea name="text" id="texto2" placeholder="Ingrese el texto que desee desencriptar" hidden></textarea>
-                <input type="hidden" class="boton" value="Copiar" id="copiar" hidden>
+                <textarea name="text" id="texto2" placeholder="Ingrese el texto que desee desencriptar" readonly></textarea>
+                <button class="boton" id="copiar" onclick="copiar()">Copiar</button>
             </div>
         </div>
     </main>
