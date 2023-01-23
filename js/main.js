@@ -1,4 +1,9 @@
 // document.getElementById('copiar').style.display = 'none';
+const alturatxt = (t) => {
+    t.style.height = "1px";
+    t.style.height = (25+t.scrollHeight)+"px";
+    console.log("Altura text area: ");
+}
 const encriptar = () => {
     const texto1 = document.getElementById("texto").value;
     let result = "";
@@ -6,7 +11,7 @@ const encriptar = () => {
         document.getElementById("texto").focus();
         return;
     }
-    document.getElementById('texto2').value = "";
+    document.getElementById('texto2').innerHTML = "";
     console.log(texto1);
     for (let i = 0; i < texto1.length; i++) {
         switch (texto1[i]) {
@@ -35,8 +40,11 @@ const encriptar = () => {
                 break;
         }
     }
+    // (document.getElementById('texto2').length/60);
+    // document.getElementById('texto2').style.height = "1px";
+
     document.getElementById('d_resultado_h').style.display = 'none';
-    document.getElementById('texto2').value = result;
+    document.getElementById('texto2').innerHTML = result;
     document.getElementById('texto2').style.display = 'initial';
     document.getElementById('copiar').style.display = 'initial';
     console.log(result);

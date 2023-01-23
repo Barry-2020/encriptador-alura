@@ -11,8 +11,9 @@ main{
     /* background-color: violet; */
 }
 .d_img{
-    width: 10%;
+    width: 5%;
     padding-top: 40px;
+    padding-left: 100px;
     /* background-color: black; */
 }
 .d_encriptar{
@@ -40,6 +41,13 @@ textarea:focus{
     /* background-color: white; */
     /* border-style: none !important; */
     outline: none;
+}
+.pgn{
+    width: 25px;
+    margin: 5 25px;
+    padding: 5px 5px;
+    border-radius: 50%; 
+   
 }
 .detalle{
     margin-top: 16px;
@@ -131,4 +139,101 @@ textarea:focus{
     align-items: center;
     text-align: center;
     
+}
+footer{
+    margin: 1m 0 0 0;
+    padding: 10px 0;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer p{
+    font-family: 'Inter';
+    font-size: 14px;
+    color: black;
+}
+/*medias queries*/
+@media screen and (max-width:1080px){
+    main{
+        width: 100%;
+        max-width: 940px;
+    }
+    .d_img{
+        width: 10%;
+        padding-left: 0;
+    }
+    .d_encriptar{
+        width: 50%;
+    }
+    .d_resultado{
+        width: auto;
+    }
+    .boton{
+        width: 100%;
+    }
+}
+@media screen and (max-width:820px){
+    /* .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    } */
+    body{
+        padding: 40px;
+    }
+    main{
+        display: inline-block;
+        width: 100%;
+    }
+    .d_encriptar{
+        padding-top: 116px;
+        padding-left: 0;
+        width: 100%;
+        height: 582px;
+    }
+    .boton{
+        width: 49%;
+        margin-right: 0;
+    }
+    
+    .d_resultado{
+        padding-left: 0;
+        width: 100%;
+    }
+    .d_resultado_hidden img{
+        display: none;
+    }
+    .d_resultado_hidden h3{
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .d_resultado_hidden .detalle{
+        font-size: 16px;
+    }
+    #texto2{
+        height: 150px;
+    }
+}
+@media screen and (max-width:480px){
+    .d_img{
+        width: 10%;
+        padding-top: 0;
+    }
+    #texto{
+        width: 100%;
+    }
+    #ErrorMsg{
+        width: 100%;
+    }
+    .boton{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .d_resultado{
+        margin-top: 64px;
+    }
+    #texto2{
+        height: 180px;
+    }
 }
