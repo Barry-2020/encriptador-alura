@@ -141,10 +141,10 @@ textarea:focus{
     
 }
 footer{
-    margin: 1m 10px 0 0;
+    /* margin: 1m 0 0 0; */
+    margin-top: 2%;
     padding: 10px 0;
     text-align: center;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,6 +173,9 @@ footer p{
     }
     .boton{
         width: 100%;
+    }
+    footer{
+        margin-top: 5%;
     }
 }
 @media screen and (max-width:820px){
@@ -214,6 +217,9 @@ footer p{
     #texto2{
         height: 150px;
     }
+    footer{
+        margin-top: 30%;
+    }
 }
 @media screen and (max-width:480px){
     .d_img{
@@ -235,5 +241,8 @@ footer p{
     }
     #texto2{
         height: 180px;
+    }
+    footer{
+        margin-top: 30%;
     }
 }
